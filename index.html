@@ -33,9 +33,9 @@
       <div class="eyebrow">ROBOTICS ROBUSTNESS INFRASTRUCTURE</div>
       <h1>Stress-test learned robot controllers before the real world does.</h1>
       <p class="hero-copy">
-        Gould Intelligence evaluates frozen learned controllers in closed-loop simulation,
-        finds reproducible robustness weaknesses, selectively applies bounded sidecar corrections
-        when validated, and falls back exactly to the original controller outside that envelope.
+        Gould Intelligence researches ways to improve the accuracy and robustness of existing robot controllers.
+        We measure results against original baselines, preserve underlying third-party model weights,
+        and distinguish promising research findings from proven real-world performance.
       </p>
       <div class="hero-actions">
         <a class="button" href="#pilot">Run a simulation pilot</a>
@@ -43,39 +43,39 @@
       </div>
 
       <div class="hero-panel" aria-label="Gould workflow">
-        <div class="flow-step"><span>01</span><strong>Frozen controller</strong></div>
+        <div class="flow-step"><span>01</span><strong>Controller baseline</strong></div>
         <div class="flow-arrow">→</div>
-        <div class="flow-step"><span>02</span><strong>Stress audit</strong></div>
+        <div class="flow-step"><span>02</span><strong>Performance study</strong></div>
         <div class="flow-arrow">→</div>
-        <div class="flow-step"><span>03</span><strong>Bounded repair</strong></div>
+        <div class="flow-step"><span>03</span><strong>Improvement research</strong></div>
         <div class="flow-arrow">→</div>
-        <div class="flow-step"><span>04</span><strong>Blind evaluation</strong></div>
+        <div class="flow-step"><span>04</span><strong>Comparative testing</strong></div>
         <div class="flow-arrow">→</div>
-        <div class="flow-step"><span>05</span><strong>ACCEPT / REJECT</strong></div>
+        <div class="flow-step"><span>05</span><strong>Reported evidence</strong></div>
       </div>
     </section>
 
     <section id="product" class="section container">
       <div class="section-heading">
         <div class="eyebrow">WHAT GOULD DOES</div>
-        <h2>Improve robustness without replacing the customer’s autonomy stack.</h2>
+        <h2>Research better controller performance with clear baselines.</h2>
       </div>
 
       <div class="grid three">
         <article class="card">
           <div class="card-number">01</div>
-          <h3>Find weaknesses</h3>
-          <p>Run the existing frozen controller through targeted closed-loop simulation stresses and identify reproducible degradations.</p>
+          <h3>Benchmark performance</h3>
+          <p>Measure controller performance against defined tasks, baselines and operating conditions.</p>
         </article>
         <article class="card">
           <div class="card-number">02</div>
-          <h3>Repair selectively</h3>
-          <p>Apply a bounded sidecar correction only when the operating condition is inside a validated applicability envelope.</p>
+          <h3>Research improvements</h3>
+          <p>Investigate improvements to control accuracy and robustness while preserving the existing underlying models.</p>
         </article>
         <article class="card">
           <div class="card-number">03</div>
-          <h3>Fail safely</h3>
-          <p>Outside the validated envelope, route back to the exact original controller rather than forcing an unvalidated correction.</p>
+          <h3>Validate outcomes</h3>
+          <p>Compare against the original controller and report where evidence supports an improvement—and where it does not.</p>
         </article>
       </div>
     </section>
@@ -83,7 +83,42 @@
     <section id="evidence" class="section section-dark">
       <div class="container">
         <div class="section-heading light">
-          <div class="eyebrow">CURRENT SIMULATION EVIDENCE</div>
+          <div class="eyebrow">NVIDIA GR00T N1.7 · OFFLINE EVALUATION</div>
+          <h2>Measured improvements in joint-action prediction.</h2>
+          <p>
+            In an internal study using genuine DROID robot recordings and original NVIDIA GR00T N1.7
+            predictions, a Gould research candidate reduced joint-position prediction error on two
+            previously reserved recordings.
+          </p>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-value">18.77%</div>
+            <div class="stat-label">lower joint-position MAE · Episode 6</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">21.89%</div>
+            <div class="stat-label">lower joint-position MAE · Episode 7</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">12</div>
+            <div class="stat-label">prediction windows · two recordings</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">Original</div>
+            <div class="stat-label">GR00T model weights unchanged</div>
+          </div>
+        </div>
+
+        <div class="evidence-note">
+          <strong>Evaluation limits:</strong> preliminary internal offline prediction-accuracy results;
+          not evidence of improved physical-robot task success or safety, end-effector or gripper improvement,
+          or generalisation across controllers. Gould Intelligence is independent and is not endorsed by NVIDIA.
+        </div>
+
+        <div class="section-heading light" style="margin-top:72px">
+          <div class="eyebrow">SEPARATE UNITREE G1 SIMULATION STUDY</div>
           <h2>Reproduced internal result on a public Unitree G1 walking controller.</h2>
           <p>
             In a precommitted unseen simulation test under synthetic observation noise, Gould improved
@@ -186,7 +221,7 @@
   <footer>
     <div class="container footer-inner">
       <span>© <span id="year"></span> Gould Intelligence</span>
-      <span>Simulation-stage robotics robustness infrastructure.</span>
+      <span>Robotics controller evaluation and research.</span>
     </div>
   </footer>
 
