@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Gould Intelligence — robotics robustness infrastructure for learned robot controllers." />
+  <meta name="description" content="Gould Intelligence — researching more accurate and reliable robot movements." />
   <title>Gould Intelligence</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,57 +30,57 @@
 
   <main id="top">
     <section class="hero container">
-      <div class="eyebrow">ROBOTICS ROBUSTNESS INFRASTRUCTURE</div>
+      <div class="eyebrow">MAKING ROBOT TECHNOLOGY MORE RELIABLE</div>
       <a class="research-alert" href="#evidence" aria-label="See Gould Intelligence NVIDIA GR00T N1.7 research results">
         <span class="research-alert-label">NEW RESEARCH · OCT 2026</span>
-        <strong>NVIDIA GR00T N1.7</strong> · Joint-prediction error reduced by 18.77% and 21.89% on two reserved recordings
+        <strong>NVIDIA GR00T N1.7</strong> · 18.77% and 21.89% less error when predicting robot joint positions in two recorded tests
         <span aria-hidden="true">→</span>
       </a>
-      <h1>Stress-test learned robot controllers before the real world does.</h1>
+      <h1>Researching ways to help robots move more reliably.</h1>
       <p class="hero-copy">
-        Gould Intelligence researches ways to improve the accuracy and robustness of existing robot controllers.
-        We measure results against original baselines, preserve underlying third-party model weights,
-        and distinguish promising research findings from proven real-world performance.
+        Gould Intelligence explores ways to improve the software that controls robot movements.
+        We compare every result with the original system and clearly explain what our tests
+        have shown—and what still needs proving.
       </p>
       <div class="hero-actions">
-        <a class="button" href="#pilot">Run a simulation pilot</a>
+        <a class="button" href="#pilot">Explore a test project</a>
         <a class="text-link" href="#evidence">See GR00T results →</a>
       </div>
 
       <div class="hero-panel" aria-label="Gould workflow">
-        <div class="flow-step"><span>01</span><strong>Controller baseline</strong></div>
+        <div class="flow-step"><span>01</span><strong>Start with the original robot</strong></div>
         <div class="flow-arrow">→</div>
-        <div class="flow-step"><span>02</span><strong>Performance study</strong></div>
+        <div class="flow-step"><span>02</span><strong>Find where it struggles</strong></div>
         <div class="flow-arrow">→</div>
-        <div class="flow-step"><span>03</span><strong>Improvement research</strong></div>
+        <div class="flow-step"><span>03</span><strong>Test a possible improvement</strong></div>
         <div class="flow-arrow">→</div>
-        <div class="flow-step"><span>04</span><strong>Comparative testing</strong></div>
+        <div class="flow-step"><span>04</span><strong>Compare the results</strong></div>
         <div class="flow-arrow">→</div>
-        <div class="flow-step"><span>05</span><strong>Reported evidence</strong></div>
+        <div class="flow-step"><span>05</span><strong>Share the findings</strong></div>
       </div>
     </section>
 
     <section id="product" class="section container">
       <div class="section-heading">
         <div class="eyebrow">WHAT GOULD DOES</div>
-        <h2>Research better controller performance with clear baselines.</h2>
+        <h2>Helping existing robot systems work better.</h2>
       </div>
 
       <div class="grid three">
         <article class="card">
           <div class="card-number">01</div>
-          <h3>Benchmark performance</h3>
-          <p>Measure controller performance against defined tasks, baselines and operating conditions.</p>
+          <h3>Understand the problem</h3>
+          <p>Test a robot's existing software to see what it does well and where it struggles.</p>
         </article>
         <article class="card">
           <div class="card-number">02</div>
-          <h3>Research improvements</h3>
-          <p>Investigate improvements to control accuracy and robustness while preserving the existing underlying models.</p>
+          <h3>Explore improvements</h3>
+          <p>Investigate whether its movements can be predicted or controlled more accurately without replacing its original software.</p>
         </article>
         <article class="card">
           <div class="card-number">03</div>
-          <h3>Validate outcomes</h3>
-          <p>Compare against the original controller and report where evidence supports an improvement—and where it does not.</p>
+          <h3>Check the results</h3>
+          <p>Compare the original and experimental results. If an improvement doesn't hold up in testing, we say so.</p>
         </article>
       </div>
     </section>
@@ -88,106 +88,107 @@
     <section id="evidence" class="section section-dark">
       <div class="container">
         <div class="section-heading light">
-          <div class="eyebrow">NVIDIA GR00T N1.7 · OFFLINE EVALUATION</div>
-          <h2>Measured improvements in joint-action prediction.</h2>
+          <div class="eyebrow">NVIDIA GR00T · ROBOT MOVEMENT RESEARCH</div>
+          <h2>More accurate predictions of robot joint movements.</h2>
           <p>
-            In an internal study using genuine DROID robot recordings and original NVIDIA GR00T N1.7
-            predictions, a Gould research candidate reduced joint-position prediction error on two
-            previously reserved recordings.
+            We tested Gould alongside NVIDIA's GR00T AI model using recordings of real robot movements.
+            In two recordings set aside for testing, Gould's experimental results were closer
+            to the recorded joint positions than GR00T's original predictions.
           </p>
         </div>
 
         <div class="stats">
           <div class="stat">
             <div class="stat-value">18.77%</div>
-            <div class="stat-label">lower joint-position MAE · Episode 6</div>
+            <div class="stat-label">less joint-position prediction error · Test 1</div>
           </div>
           <div class="stat">
             <div class="stat-value">21.89%</div>
-            <div class="stat-label">lower joint-position MAE · Episode 7</div>
+            <div class="stat-label">less joint-position prediction error · Test 2</div>
           </div>
           <div class="stat">
             <div class="stat-value">12</div>
-            <div class="stat-label">prediction windows · two recordings</div>
+            <div class="stat-label">short prediction samples across two recordings</div>
           </div>
           <div class="stat">
             <div class="stat-value">Original</div>
-            <div class="stat-label">GR00T model weights unchanged</div>
+            <div class="stat-label">NVIDIA's original AI model unchanged</div>
           </div>
         </div>
 
         <div class="evidence-note">
-          <strong>Evaluation limits:</strong> preliminary internal offline prediction-accuracy results;
-          not evidence of improved physical-robot task success or safety, end-effector or gripper improvement,
-          or generalisation across controllers. Gould Intelligence is independent and is not endorsed by NVIDIA.
+          <strong>What these results mean:</strong> Gould's predictions were closer to recorded joint positions
+          in these small, offline tests. We have <strong>not</strong> yet proved that robots complete tasks better,
+          move more safely, or improve in every type of movement. This was our own research,
+          not a study conducted or endorsed by NVIDIA.
         </div>
 
         <div class="section-heading light" style="margin-top:72px">
-          <div class="eyebrow">SEPARATE UNITREE G1 SIMULATION STUDY</div>
-          <h2>Reproduced internal result on a public Unitree G1 walking controller.</h2>
+          <div class="eyebrow">SEPARATE UNITREE G1 COMPUTER-SIMULATION TESTS</div>
+          <h2>Promising results in robot walking simulations.</h2>
           <p>
-            In a precommitted unseen simulation test under synthetic observation noise, Gould improved
-            tracking performance while keeping the original controller frozen.
+            We also tested an existing Unitree G1 walking controller in computer simulations
+            with deliberately noisy sensor readings. In some test conditions, Gould reduced
+            the difference between the robot's movement and its intended path.
           </p>
         </div>
 
         <div class="stats">
           <div class="stat">
             <div class="stat-value">~6.3%</div>
-            <div class="stat-label">lower mean tracking error</div>
+            <div class="stat-label">lower average movement-tracking error</div>
           </div>
           <div class="stat">
             <div class="stat-value">~6.9%</div>
-            <div class="stat-label">lower p90 tracking error</div>
+            <div class="stat-label">lower tracking error at the 90th percentile</div>
           </div>
           <div class="stat">
             <div class="stat-value">100%</div>
-            <div class="stat-label">survival retained in tested blind profiles</div>
+            <div class="stat-label">survival in the tested simulation runs</div>
           </div>
           <div class="stat">
             <div class="stat-value">Exact</div>
-            <div class="stat-label">fallback under out-of-envelope delay</div>
+            <div class="stat-label">return to original control in unsupported delays</div>
           </div>
         </div>
 
         <div class="evidence-note">
-          <strong>Important:</strong> this is internal simulation evidence using a publicly released Unitree G1 controller.
-          Synthetic observation noise is not calibrated Unitree sensor noise. This is not physical-robot validation,
-          production validation, customer validation, or Unitree endorsement.
+          <strong>Important:</strong> these tests happened in a computer simulation, not on a physical robot.
+          The simulated sensor problems may differ from real-world ones. Unitree did not conduct or endorse these tests.
         </div>
       </div>
     </section>
 
     <section id="pilot" class="section container">
       <div class="section-heading">
-        <div class="eyebrow">EXTERNAL SIMULATION PILOT</div>
-        <h2>One controller. One task. Agreed metrics.</h2>
-        <p>The first external pilot can stay deliberately narrow and entirely in simulation.</p>
+        <div class="eyebrow">POTENTIAL ROBOT TEST PROJECT</div>
+        <h2>Start with one robot system and one clear goal.</h2>
+        <p>A first project could use computer simulation, with no need to bring a physical robot.</p>
       </div>
 
       <div class="pilot-layout">
         <div class="pilot-box">
-          <h3>What we need</h3>
+          <h3>What we'd need</h3>
           <ul>
-            <li>Closed-loop simulator or remote sandbox</li>
-            <li>Frozen controller interface</li>
-            <li>Observation and action interface</li>
-            <li>Environment reset capability</li>
-            <li>Task metrics</li>
-            <li>Controller timing / latency metadata</li>
-            <li>Success criteria agreed before final evaluation</li>
+            <li>A robot simulator or remote testing environment</li>
+            <li>Access to the existing robot control system</li>
+            <li>Details of the robot's sensor inputs and movement commands</li>
+            <li>A way to repeat the same test</li>
+            <li>A clear measure of how well the robot performs</li>
+            <li>Information about how quickly commands must run</li>
+            <li>Agreed rules for what counts as success</li>
           </ul>
         </div>
         <div class="pilot-box accent">
-          <h3>What you receive</h3>
+          <h3>What you'd receive</h3>
           <ul>
-            <li>Baseline performance evidence</li>
-            <li>Stress / weakness analysis</li>
-            <li>Repair applicability decision</li>
-            <li>Bounded repair results where applicable</li>
-            <li>Exact-fallback verification</li>
-            <li>Precommitted unseen-test results</li>
-            <li>Final ACCEPT / REJECT evidence package</li>
+            <li>Results from the original robot system</li>
+            <li>A report on where it struggles</li>
+            <li>An assessment of whether improvements are supported</li>
+            <li>Results of any tested changes</li>
+            <li>Checks that the original system is preserved where needed</li>
+            <li>Results on separate tests chosen in advance</li>
+            <li>A clear final report explaining what worked and what didn't</li>
           </ul>
         </div>
       </div>
@@ -196,12 +197,12 @@
     <section class="section container">
       <div class="quote-card">
         <div>
-          <div class="eyebrow">DESIGNED FOR EVALUATION, NOT HYPE</div>
-          <h2>Gould does not turn a failed test into a pass.</h2>
+          <div class="eyebrow">CLEAR RESULTS, NOT JUST BIG NUMBERS</div>
+          <h2>We report setbacks as well as successes.</h2>
         </div>
         <p>
-          Blind criteria are fixed before evaluation. Opened blind sets are retired.
-          The original controller remains frozen. A repair that does not satisfy the gate is rejected.
+          We decide how to judge an experiment before seeing its final results.
+          We keep the original robot software as a comparison and don't call a change successful unless the evidence supports it.
         </p>
       </div>
     </section>
@@ -209,14 +210,15 @@
     <section id="contact" class="section contact-section">
       <div class="container contact-inner">
         <div>
-          <div class="eyebrow">SEEKING FIRST EXTERNAL PILOT</div>
-          <h2>Have one learned controller worth stress-testing?</h2>
+          <div class="eyebrow">OPEN TO RESEARCH COLLABORATIONS</div>
+          <h2>Interested in testing your robot software?</h2>
           <p>
-            Start with a 15-minute technical discussion. No physical robot access or production deployment is required for the initial evaluation.
+            We can begin with a short conversation about a small simulation-based evaluation.
+            There's no need to provide a physical robot for the first discussion.
           </p>
         </div>
         <div class="contact-card">
-          <div class="contact-label">Pilot enquiries</div>
+          <div class="contact-label">Research enquiries</div>
           <a id="email-link" href="mailto:isaach.gould@icloud.com">EMAIL HERE</a>
         </div>
       </div>
@@ -226,7 +228,7 @@
   <footer>
     <div class="container footer-inner">
       <span>© <span id="year"></span> Gould Intelligence</span>
-      <span>Robotics controller evaluation and research.</span>
+      <span>Research into more accurate and reliable robotics.</span>
     </div>
   </footer>
 
