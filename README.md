@@ -10,7 +10,7 @@ Robots rely on software to decide how to move. Gould Intelligence is an independ
 
 We ran NVIDIA's GR00T AI model on recordings of real robot movements and compared its joint-position predictions with the recorded actions.
 
-In two recordings that had been set aside for evaluation, Gould's experimental predictions showed less error than the original GR00T predictions:
+In two recordings that had been set aside for evaluation, Gould Intelligence's experimental predictions showed less error than the original GR00T predictions:
 
 | Recording | Reduction in joint-position prediction error |
 | --- | ---: |
@@ -19,11 +19,11 @@ In two recordings that had been set aside for evaluation, Gould's experimental p
 
 The experiment was decided before looking at these two recordings. It involved **12 short prediction samples in total**, and NVIDIA's original model was left unchanged.
 
-**What this means:** Gould's joint-position predictions matched the recorded data more closely in these small offline tests. **It does not yet mean a physical robot moved better, completed tasks more successfully, or became safer.** We have not demonstrated improvements to GR00T's gripper or end-effector movements.
+**What this means:** Gould Intelligence's joint-position predictions matched the recorded data more closely in these small offline tests. **It does not yet mean a physical robot moved better, completed tasks more successfully, or became safer.** We have not demonstrated improvements to GR00T's gripper or end-effector movements.
 
 ### Unitree G1 — separate walking simulations
 
-In earlier computer-simulation tests with a publicly available Unitree G1 walking controller, Gould reduced average movement-tracking error by around **6%** under some simulated disturbances.
+In earlier computer-simulation tests with a publicly available Unitree G1 walking controller, Gould Intelligence reduced average movement-tracking error by around **6%** under some simulated disturbances.
 
 These results came from simulations, **not tests on a physical humanoid robot**.
 
@@ -36,7 +36,7 @@ These results came from simulations, **not tests on a physical humanoid robot**.
 
 ## Current status
 
-Gould is a **research-stage prototype**, not a proven commercial or safety-certified robot system.
+Gould Intelligence is a **research-stage prototype**, not a proven commercial or safety-certified robot system.
 
 Gould Intelligence is independent and **not affiliated with or endorsed by NVIDIA or Unitree**.
 
