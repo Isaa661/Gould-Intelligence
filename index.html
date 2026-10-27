@@ -21,7 +21,7 @@
       </a>
       <div class="nav-links">
         <a href="#product">Product</a>
-        <a href="#evidence">GR00T research</a>
+        <a href="#evidence">Research results</a>
         <a href="#pilot">Pilot</a>
       </div>
       <a class="button button-small" href="#contact">Request a pilot</a>
@@ -33,7 +33,7 @@
       <div class="eyebrow">MAKING ROBOT TECHNOLOGY MORE RELIABLE</div>
       <a class="research-alert" href="#evidence" aria-label="See Gould Intelligence NVIDIA GR00T N1.7 research results">
         <span class="research-alert-label">NEW RESEARCH · OCT 2026</span>
-        <strong>NVIDIA GR00T N1.7</strong> · 18.77% and 21.89% less error when predicting robot joint positions in two recorded tests
+        <strong>October 2026 research</strong> · 5.10% lower GR00T end-effector prediction error; stronger speed tracking in simulated Unitree G1 and H1 walking tests
         <span aria-hidden="true">→</span>
       </a>
       <h1>Researching ways to help robots move more reliably.</h1>
@@ -44,7 +44,7 @@
       </p>
       <div class="hero-actions">
         <a class="button" href="#pilot">Explore a test project</a>
-        <a class="text-link" href="#evidence">See GR00T results →</a>
+        <a class="text-link" href="#evidence">See research results →</a>
       </div>
 
       <div class="hero-panel" aria-label="Gould Intelligence research process">
@@ -87,8 +87,32 @@
 
     <section id="evidence" class="section section-dark">
       <div class="container">
+
         <div class="section-heading light">
-          <div class="eyebrow">NVIDIA GR00T · ROBOT MOVEMENT RESEARCH</div>
+          <div class="eyebrow">NEW · NVIDIA GR00T N1.7 · OCTOBER 2026</div>
+          <h2>Closer predictions of robot-arm movements.</h2>
+          <p>
+            In a new offline evaluation on six previously unused recorded episodes,
+            Gould Intelligence reduced overall end-effector prediction error compared with the original
+            NVIDIA GR00T N1.7 model. We evaluated 24 short prediction windows
+            while keeping the original NVIDIA model weights unchanged.
+          </p>
+        </div>
+        <div class="stats">
+          <div class="stat"><div class="stat-value">5.10%</div><div class="stat-label">lower overall end-effector prediction error</div></div>
+          <div class="stat"><div class="stat-value">0.81%</div><div class="stat-label">lower position-only prediction error</div></div>
+          <div class="stat"><div class="stat-value">6</div><div class="stat-label">previously unused recorded episodes</div></div>
+          <div class="stat"><div class="stat-value">24</div><div class="stat-label">short prediction windows evaluated</div></div>
+        </div>
+        <div class="evidence-note">
+          <strong>What this means:</strong> The combined end-effector prediction error was lower, but
+          position-only error during commanded motion improved by just 0.05%.
+          Better physical robot movement, task success and safety have <strong>not</strong> been demonstrated.
+          This is independent research, not an NVIDIA-conducted or endorsed study.
+        </div>
+
+        <div class="section-heading light">
+          <div class="eyebrow">EARLIER GR00T TESTS · JOINT-POSITION PREDICTIONS</div>
           <h2>More accurate predictions of robot joint movements.</h2>
           <p>
             We tested Gould Intelligence alongside NVIDIA's GR00T AI model using recordings of real robot movements.
@@ -123,8 +147,33 @@
           not a study conducted or endorsed by NVIDIA.
         </div>
 
+
         <div class="section-heading light" style="margin-top:72px">
-          <div class="eyebrow">SEPARATE UNITREE G1 COMPUTER-SIMULATION TESTS</div>
+          <div class="eyebrow">NEW · UNITREE WALKING SIMULATIONS · OCTOBER 2026</div>
+          <h2>More accurate speed tracking in simulated walking.</h2>
+          <p>
+            In separate 12-second MuJoCo stress tests, experimental Gould Intelligence
+            corrections helped Unitree G1 and H1 walking controllers follow changing speed commands
+            more closely. Each was compared against its original controller in seven paired
+            scenarios, including simulated disturbances.
+          </p>
+        </div>
+        <div class="stats">
+          <div class="stat"><div class="stat-value">20.77%</div><div class="stat-label">lower G1 simulated speed-tracking error</div></div>
+          <div class="stat"><div class="stat-value">12.68%</div><div class="stat-label">lower H1 simulated speed-tracking error</div></div>
+          <div class="stat"><div class="stat-value">7 / 7</div><div class="stat-label">scenarios improved for each controller</div></div>
+          <div class="stat"><div class="stat-value">0</div><div class="stat-label">additional simulated falls in these tests</div></div>
+        </div>
+        <div class="evidence-note">
+          <strong>Important:</strong> These results measure speed-tracking accuracy in computer simulations,
+          not physical-robot task success or safety. The original controller weights were unchanged.
+          A third Unitree controller kept its original commands because an experimental correction
+          did not meet our acceptance requirements. These results are from separate experiments
+          and were not conducted or endorsed by Unitree.
+        </div>
+
+        <div class="section-heading light" style="margin-top:72px">
+          <div class="eyebrow">EARLIER UNITREE G1 SIMULATION RESEARCH</div>
           <h2>Promising results in robot walking simulations.</h2>
           <p>
             We also tested an existing Unitree G1 walking controller in computer simulations
