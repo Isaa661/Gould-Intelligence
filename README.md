@@ -2,42 +2,46 @@
 
 **Researching ways to make robot movements more accurate and reliable.**
 
-Robots rely on software to decide how to move. Gould Intelligence is an independent research project exploring whether that software can be improved **without replacing the original system**. We test ideas, compare results, and report what works as well as what doesn't.
+Gould Intelligence is an independent robotics research project investigating corrections to existing robotics AI models and controllers. Our experiments compare modified behaviour with the original system, retain original model weights and disclose limitations as well as improvements.
 
-## What we've tested
+Website: https://isaa661.github.io/Gould-Intelligence/
 
-### NVIDIA GR00T N1.7 — robot movement predictions
+## Latest results — October 2026
 
-We ran NVIDIA's GR00T AI model on recordings of real robot movements and compared its joint-position predictions with the recorded actions.
+### NVIDIA GR00T N1.7 — end-effector predictions
 
-In two recordings that had been set aside for evaluation, Gould Intelligence's experimental predictions showed less error than the original GR00T predictions:
+In an independent offline evaluation on **six previously unused recorded episodes** and **24 short prediction windows**, Gould Intelligence's frozen experimental correction produced:
 
-| Recording | Reduction in joint-position prediction error |
+| Metric | Reduction in prediction error |
 | --- | ---: |
-| Test 1 (Episode 6) | **18.77%** |
-| Test 2 (Episode 7) | **21.89%** |
+| Overall end-effector prediction error | **5.10%** |
+| Position-only error (XYZ) | **0.81%** |
+| Position-only error during commanded motion | **0.05%** |
 
-The experiment was decided before looking at these two recordings. It involved **12 short prediction samples in total**, and NVIDIA's original model was left unchanged.
+The overall error reduction does **not** demonstrate better physical robot task success or meaningful improvement in position error during motion. NVIDIA model weights were unmodified.
 
-**What this means:** Gould Intelligence's joint-position predictions matched the recorded data more closely in these small offline tests. **It does not yet mean a physical robot moved better, completed tasks more successfully, or became safer.** We have not demonstrated improvements to GR00T's gripper or end-effector movements.
+### Unitree G1 and H1 — separate closed-loop walking simulations
 
-### Unitree G1 — separate walking simulations
+In **12-second MuJoCo stress simulations** featuring changing speed commands and simulated disturbances, frozen experimental controller-specific corrections achieved the following results versus the unchanged original policies:
 
-In earlier computer-simulation tests with a publicly available Unitree G1 walking controller, Gould Intelligence reduced average movement-tracking error by around **6%** under some simulated disturbances.
+| Robot/controller | Speed-tracking error reduction | Scenarios improved |
+| --- | ---: | ---: |
+| Unitree G1 12DoF walking policy | **20.77%** | **7 / 7** |
+| Unitree H1 walking policy | **12.68%** | **7 / 7** |
 
-These results came from simulations, **not tests on a physical humanoid robot**.
+Both baseline and corrected controllers remained stable during these trials, with **no additional simulated falls**. The separately tested H1-2 policy remained on exact fallback after its candidate failed the required checks.
 
-## What we're working on next
+These are limited **simulation-only speed-tracking results**, not a demonstration of improved walking on real robots, safer operation or completed physical tasks. Original Unitree controller weights were unchanged.
 
-- Making predictions of arm and gripper movements more accurate.
-- Testing whether improvements help robots complete tasks, not just match recorded data.
-- Investigating whether the approach works with more than one type of robot controller.
-- Keeping evaluations clear, reproducible and fair.
+## Earlier experiments — separate research
 
-## Current status
+- **GR00T joint-position predictions:** Two earlier offline test recordings with 12 short prediction samples combined reported **18.77%** and **21.89%** lower joint-position prediction error. These results use a different metric from the newer end-effector evaluation.
+- **Original Gould Intelligence Unitree G1 research:** Earlier simulation experiments reported approximately **6.3%** lower average movement-tracking error under selected simulated disturbances. This historic system is separate from the newer G1 controller correction.
 
-Gould Intelligence is a **research-stage prototype**, not a proven commercial or safety-certified robot system.
+## Status and next steps
 
-Gould Intelligence is independent and **not affiliated with or endorsed by NVIDIA or Unitree**.
+Gould Intelligence remains a **research-stage prototype**, not a safety-certified robot system or a commercially validated product. Next steps include validating real task outcomes, broader independent simulation and robot evaluation, and integrating our experimental research modules into an audited installable sidecar.
 
-For research enquiries, visit the project website.
+Gould Intelligence is independent and **not affiliated with or endorsed by NVIDIA or Unitree**. Private correction methods and internal research code are not published here.
+
+For research enquiries, see the website.
